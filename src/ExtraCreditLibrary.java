@@ -1,8 +1,4 @@
-public class ExtraCredit {
-    public static void main(String[] args) {
-
-    }
-
+public class ExtraCreditLibrary {
     /**
      * @param values is an integer array of n length
      * @return the minimum value in the array values
@@ -61,14 +57,17 @@ public class ExtraCredit {
 
     /**
      * @param values is an integer array of n length
-     * @return the sum of the values of the array
+     * @param target is the value we want to find in the array
+     * @return boolean value if the target value was found in the array values
      */
-    public static int sum(int values[]){
-        int sum =0;
+    public static boolean contains(int values[], int target){
+        boolean isFound = false;
         for(int i = 0; i < values.length; i++){
-
-            sum += values[i];
+            if(values[i] == target){
+                isFound = true;
+                break;
+            }
         }
-        return sum;
+        return isFound;
     }
 }
